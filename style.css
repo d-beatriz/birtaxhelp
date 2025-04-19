@@ -1,0 +1,427 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2c2c2c;
+  background: linear-gradient(135deg, #f3f3f3, #fdfdfd);
+  line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+/* Artistic Shapes */
+body::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, #dbeafe, transparent);
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -10%;
+  left: -10%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at center, #fef9c3, transparent);
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+/* Header */
+header {
+  padding: 2rem 0;
+  background: transparent;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #1e40af;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%);
+  border-radius: 0 0 60px 60px;
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+.hero p {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+.btn-primary {
+  padding: 0.8rem 2rem;
+  background: linear-gradient(90deg, #3b82f6, #1e40af);
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 64, 175, 0.5);
+}
+
+/* Services */
+.services {
+  background: #fff;
+  padding: 5rem 0;
+}
+.services h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #1e3a8a;
+}
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.service-item {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1 1 300px;
+  transition: transform 0.3s ease;
+}
+.service-item:hover {
+  transform: translateY(-5px);
+}
+.service-item h4 {
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+.service-item p {
+  color: #6b7280;
+}
+
+/* About */
+.about {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #fefce8, #fef9c3);
+  border-radius: 60px;
+  text-align: center;
+}
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #92400e;
+}
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #5b3415;
+}
+
+/* Contact */
+.contact {
+  padding: 5rem 0;
+  background: #fff;
+}
+.contact h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+.contact p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact input,
+.contact textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+.contact button {
+  align-self: flex-start;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+
+/* Dropdown */
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Main dropdown button */
+.dropbtn {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Main dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Submenu for Tax Filing */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .submenu-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.dropdown-submenu:hover .submenu-content {
+  display: block;
+}
+
+/* Tax Highlight Section */
+.tax-highlight {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  text-align: center;
+  border-radius: 60px;
+}
+
+.tax-title {
+  font-size: 3rem;
+  color: #1e3a8a;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.tax-subtitle {
+  font-size: 1.25rem;
+  color: #374151;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+.tax-note {
+  font-size: 1.1rem;
+  color: #2563eb;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Why Choose Us */
+.why-choose {
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+  padding: 5rem 0;
+  text-align: center;
+  border-radius: 60px;
+}
+
+.why-choose h3 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 3rem;
+}
+
+.choose-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.choose-item {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1 1 280px;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.choose-item:hover {
+  transform: translateY(-5px);
+}
+
+.choose-item h4 {
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.choose-item p {
+  color: #6b7280;
+}
+
+/* About Page */
+.about-page {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #fefce8, #fef9c3);
+  text-align: center;
+  border-radius: 60px;
+}
+
+.about-page h2 {
+  font-size: 2.5rem;
+  color: #92400e;
+  margin-bottom: 2rem;
+}
+
+.about-page p {
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  color: #5b3415;
+}
+
+/* Why Choose Us (matching Services section) */
+.why-choose {
+  background: #fff;
+  padding: 5rem 0;
+}
+
+.why-choose h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #1e3a8a;
+}
+
+.choose-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.choose-item {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1 1 300px;
+  transition: transform 0.3s ease;
+}
+
+.choose-item:hover {
+  transform: translateY(-5px);
+}
+
+.choose-item h4 {
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+
+.choose-item p {
+  color: #6b7280;
+}
+
+/* Get Started Section */
+.get-started {
+  background: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.get-started h3 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+.get-help {
+  font-size: 1.1rem;
+  color: #2563eb;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
